@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SGCS Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="section hero">
+    <h1>Cybersecurity Portfolio</h1>
+    <p>Professional. Secure. Focused.</p>
+  </section>
+
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>Write a brief professional summary about yourself here.</p>
+  </section>
+
+  <section id="projects" class="section projects">
+    <h2>Projects & Case Studies</h2>
+    <div class="card-grid">
+      <div class="card" onclick="openModal('project1')">
+        <h3>Project 1</h3>
+        <p>Click to view details</p>
+      </div>
+      <div class="card" onclick="openModal('project2')">
+        <h3>Project 2</h3>
+        <p>Click to view details</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="section blog">
+    <h2>Blog</h2>
+    <div class="card-grid">
+      <div class="card" onclick="openModal('blog1')">
+        <h3>Blog Post 1</h3>
+        <p>Click to read</p>
+      </div>
+      <div class="card" onclick="openModal('blog2')">
+        <h3>Blog Post 2</h3>
+        <p>Click to read</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section certs">
+    <h2>Certifications</h2>
+    <div class="card-grid">
+      <div class="card" onclick="openModal('cert1')">
+        <h3>CompTIA Security+</h3>
+      </div>
+      <div class="card" onclick="openModal('cert2')">
+        <h3>Microsoft Certified: Security Engineer</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+  </section>
+
+  <!-- Modals -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
