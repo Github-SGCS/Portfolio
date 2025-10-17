@@ -462,48 +462,6 @@ body.light-theme .about-card {
 <a class="btn view-btn" href=https://github.com/yourusername/repo target="_blank" rel="noopener">GitHub</a>
 </div>
 </article>
-<!-- Add placeholders for more projects -->
-<article class="project">
-<div class="meta">Red Team / Blue Team</div>
-<h3>Red Team Exercise (redacted)</h3>
-<p>Summary of methodology and remediation recommendations (redacted for sensitivity).</p>
-<div class="tags">
-<span class="tag-pill">Testing</span>
-<span class="tag-pill">Remediation</span>
-</div>
-<div class="more">
-<small style="color:var(--muted)">Redacted</small>
-<button class="btn view-btn" data-open="soon">View</button>
-</div>
-</article>
-<article class="project">
-<div class="meta">Cloud • CI/CD</div>
-<h3>Secure Pipeline Proof-of-Concept</h3>
-<p>Implemented secure build pipelines with signing and least privilege agent configuration.</p>
-<div class="tags">
-<span class="tag-pill">CI</span>
-<span class="tag-pill">Security</span>
-</div>
-<div class="more">
-<small style="color:var(--muted)">PoC</small>
-<a class="btn view-btn" href=https://github.com/yourusername/pipeline target="_blank" rel="noopener">Repo</a>
-</div>
-</article>
-<article class="project">
-<div class="meta">Lab • Learning</div>
-<h3>Home Lab — SIEM & Threat Hunting</h3>
-<p>Design and docs for a low-cost home lab using ELK/OSSEC to simulate detection exercises.</p>
-<div class="tags">
-<span class="tag-pill">ELK</span>
-<span class="tag-pill">Threat Hunting</span>
-</div>
-<div class="more">
-<small style="color:var(--muted)">Guide</small>
-<a class="btn view-btn" href="/lab-guide.pdf" target="_blank" rel="noopener">Download</a>
-</div>
-</article>
-</div>
-</section>
 <!-- CERTIFICATIONS -->
 <section id="certs" class="section">
 <h2>Certifications & Skills</h2>
@@ -516,13 +474,36 @@ body.light-theme .about-card {
 </div>
 </section>
 <!-- CONTACT -->
-<h2>Reach me</h2>
+<section id="contact" class="section">
+<h2>Contact</h2>
+<div class="contact-grid">
+<div class="contact-card">
+<p style="color:var(--muted)">I'm happy to discuss collaboration, open roles, or give feedback on security projects. If you'd like to request a redacted case study or confirm certs, drop a message below or email me directly.</p>
+<form id="contactForm" onsubmit="submitContact(event)" style="margin-top:12px">
+<label style="font-size:13px;color:var(--muted)">Your name</label><br>
+<input required name="name" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:6px"><br>
+<label style="font-size:13px;color:var(--muted);margin-top:8px;display:block">Email</label>
+<input required type="email" name="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:6px"><br>
+<label style="font-size:13px;color:var(--muted);margin-top:8px;display:block">Message</label>
+<textarea required name="message" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:6px"></textarea>
+<div style="margin-top:12px;display:flex;gap:10px">
+<button class="btn primary" type="submit">Send message</button>
+<a class="btn" href=mailto:you@sgcs.uk?subject=Contact%20via%20site>Email directly</a>
+</div>
+<div id="formMsg" style="margin-top:10px;color:var(--muted);font-size:13px"></div>
+</form>
+</div>
+<aside class="contact-card">
+<div style="font-weight:700">Reach me</div>
 <div style="color:var(--muted);margin-top:8px">Email: <a href=mailto:you@sgcs.uk style="color:var(--accent)">you@sgcs.uk</a></div>
 <div style="color:var(--muted);margin-top:8px">LinkedIn: <a href=https://www.linkedin.com/in/yourprofile target="_blank" style="color:var(--accent)">yourprofile</a></div>
 <div style="color:var(--muted);margin-top:8px">GitHub: <a href=https://github.com/yourusername target="_blank" style="color:var(--accent)">yourusername</a></div>
 <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
 <div style="font-size:13px;color:var(--muted)">Availability: Open to work & contract engagements.</div>
+</div>
+</div>
 </aside>
+</div>
 </section>
 </main>
 <footer>
@@ -730,3 +711,4 @@ document.querySelectorAll('.project').forEach(proj=>{
 </script>
 </body>
 </html>
+
