@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam_Gresty_CV</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { margin: 0; }
+        section { margin-bottom: 30px; }
+        h2 { color: #2c3e50; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Samuel Gresty</h1>
+        <p>Email: samgresty1@icloud.com | Phone: 07546 839545 | Location: Chesterfield, UK </p> 
+		<p>Website: SGCS.UK | LinkedIn: www.linkedin.com/in/samuel-gresty</p>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Cybersecurity Analyst with strong experience in SOC operations, incident response, vulnerability management, PIM, and SIEM engineering.</p> 
+		<p>Skilled at leading incidents, collaborating with third-party SOCs, and improving detection logic.</p>
+		<p>Hands-on with Microsoft Sentinel, Defender, Mimecast, Nessus, Cisco Umbrella. Experienced in audits, access reviews, and remediation projects. Proactive, calm under pressure, and committed to professional growth (currently pursuing OSCP certification).</p>
+    </section>
+
+    <section>
+        <h2>Core Competencies</h2>
+        <ul>
+            <li><strong>SOC Operations & Incident Response</strong> Incident leadership, Investigations, Containment, Escalation.</li>
+            <li><strong>SIEM & Threat Hunting:</strong> Microsoft Sentinel, KQL scripting, custom dashboards</li>
+			<li><strong>Threat Detection & Email Security:</strong> Phishing analysis, Mimecast tuning, Defender quarantine</li>
+			<li><strong>Vulnerability & Access Management:</strong> Nessus (Tenable), PIM reviews, Patch cycles</li>
+			<li><strong>Cloud & Endpoint Security:</strong> Microsoft 365 Defender, Intune, Azure, Cisco Umbrella</li>
+			<li><strong>Audit & Compliance:</strong> ISO 27001, CIS Benchmarks, External pen-testing exposure</li>
+			<li><strong>Infrastructure Security:</strong> Windows Server/Desktop, Firewall, DNS </li>
+			<li><strong>Collaboration & Vendor Liaison:</strong> Third-party SOC, Vendors, HR, IT teams</li>
+			<li><strong>Documentation & Process:</strong> SOPs, knowledge bases, workflow optimisation</li>
+        </ul>
+    </section>
+
+<section>
+        <h2>Technical Tools</h2>
+        <ul>
+            <li><strong>Security:</strong> Microsoft 365 Defender, Mimecast, Cisco Umbrella, Nessus Scanning, Microsoft Entra Privileged Identity Management (PIM)</li>
+            <li><strong>SIEM & scripting:</strong> Microsoft Sentinel, KQL, Basic Powershell.</li>
+			<li><strong>Infrastructure:</strong> Windows OS, Active Directory, Microsoft Admin Suite.</li>
+			<li><strong>Network Security:</strong> Firewalls, DNS</li>
+			<li><strong>Collaboration & Ticketing:</strong> Microsoft Teams, Outlook, Ivanti.</li>
+        </ul>
+    </section>
+
+<section>
+        <h2>Notable Achievements</h2>
+        <ul>
+            <li><strong>Mail Delivery:</strong> Reduced the time it takes for users to receive emails, improving Mimecast policies and rules.</li>
+            <li><strong>Vulnerability Management:</strong> Scoped and remediated critical vulnerabilities using Nessus and Defender.</li>
+            <li><strong>Knowledge Sharing:</strong> Created SOC SOPs and mentored new members of the cybersecurity team to use Patch My PC.</li>
+            <li><strong>SOC Improvements:</strong> Proposed and implemented SOC triage workflow changes, cutting alert handling time.</li>
+            <li><strong>Phishing Test:</strong> Contained a credential phishing campaign with zero business impact.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+
+        <h3>Cyber Security Analyst | Sciensus | Mar 2023 – Present</h3>
+        <p>I’m a part of the cybersecurity team at Sciensus, where we help to deliver life changing medicines across Europe. In my role, I focus on protecting our digital infrastructure and keeping sensitive patient data secure. Here are some of the key areas I am responsible for:</p>
+
+        <h4>Incident Response & SOC Operations</h4>
+        <ul>
+            <li>Led and chaired multiple high-severity incidents, coordinating with IT, HR, vendors, and third-party SOC.</li>
+            <li>Investigated phishing, malware, and sign-in anomalies, preventing compromise of 500+ user accounts.</li>
+            <li>Contained incidents by quarantining emails, blocking IOCs, and rebuilding compromised endpoints.</li>
+        </ul>
+
+        <h4>SIEM & Threat Detection</h4>
+        <ul>
+            <li>Built custom KQL queries in Microsoft Sentinel to improve threat hunting and tune detections.</li>
+            <li>Reduced false positives by 48%, streamlining analyst workload.</li>
+            <li>Developed Sentinel dashboards to report SOC KPIs and incident metrics.</li>
+        </ul>
+
+        <h4>Vulnerability & PIM Management</h4>
+        <ul>
+            <li>Conducted Nessus vulnerability scans and supported remediation.</li>
+            <li>Performed privileged access reviews, remediating mailbox, device, and Active Directory permissions.</li>
+            <li>Supported patch cycles and mentored colleagues on Patch My PC.</li>
+        </ul>
+
+        <h4>Risk Management</h4>
+        <ul>
+            <li>Point of contact for IT team risk management across multiple domains.</li>
+            <li>Built a risk template used in new risk management software (4Risk).</li>
+        </ul>
+
+        <h4>Audit & Compliance</h4>
+        <ul>
+            <li>Contributed to ISO 27001 audit preparation and internal CIS Benchmark reviews.</li>
+            <li>Supported external penetration testing engagements by providing evidence and remediation input.</li>
+        </ul>
+
+        <h4>Collaboration & Vendor Liaison</h4>
+        <ul>
+            <li>Partnered with third-party SOC providers for escalations and tuning recommendations.</li>
+            <li>Liaised with vendors and internal teams to remediate vulnerabilities and improve detection tooling.</li>
+        </ul>
+
+        <h4>Process & Documentation</h4>
+        <ul>
+            <li>Authored SOPs, knowledge base entries, and workflow guides.</li>
+            <li>Delivered incident reports and chaired stakeholder review sessions.</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Previous Roles</h2>
+        <ul>
+            <li><strong>Service Desk Engineer</strong> – Littlefish, Nottingham (Nov 2022 – Mar 2023)</li>
+            <li><strong>Technical Support Engineer</strong> – Opus / Everything Tech (Jan 2022 – Aug 2022)</li>
+            <li><strong>1st Line Support Technician</strong> – EMCS (Aug 2021 – Jan 2022)</li>
+            <li><strong>1st Line Support Engineer</strong> – Ergo Computing (Nov 2020 – Jul 2021)</li>
+            <li><strong>Kitchen Assistant</strong> – Notcutts Garden Centre (Aug 2018 – Nov 2020)</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Certifications</h2>
+        <ul>
+            <li>OSCP (Offensive Security Certified Professional) – In Progress</li>
+            <li>SC-900: Microsoft Security, Compliance and Identity Fundamentals – June 2025</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li>ICSI: Cybersecurity Masterclass – July 2022 to March 2023 (Self-Paced Learning)</li>
+            <li>Fortinet: NSE 1,2,3 – October 2022</li>
+            <li>IT Career Switch: First Line IT Support – 2020 (Self-Paced Learning)</li>
+            <li>ICSI: Certified Network Security Specialist – 2020 (Self-Paced Learning)</li>
+        </ul>
+    </section>
+
+</body>
+</html>
