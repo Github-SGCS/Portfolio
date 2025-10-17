@@ -1,93 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #0d1117;
-  color: #e6edf3;
-  scroll-behavior: smooth;
+    // Basic interactive behaviors (no frameworks)
+ 
+    document.getElementById('year').textContent = new Date().getFullYear();
+ 
+    const modal = document.getElementById('modal');
+ 
+    const modalContent = document.getElementById('modalContent');
+ 
+    // Pre-populated case study content - replace or extend
+ 
+    const cases = {
+ 
+      "project-1": {
+ 
+        title: "Tenant Hardening & Landing Zone",
+ 
+        subtitle: "Azure • Terraform • Policy as Code",
+ 
+        body: `
+<p><strong>Summary</strong> — Designed and deployed a multi-subscription landing zone using Terraform modules, Azure Policy initiatives and RBAC reviews to reduce attack surface and provide consistent guardrails.</p>
+<h4>Problem</h4>
+<p>Inconsistent subscription configuration and permissive roles caused management complexity and elevated risk.</p>
+<h4>Approach</h4>
+<ul>
+<li>Defined baseline subscriptions and tagging requirements</li>
+<li>Implemented policy initiatives for allowed SKUs, NSG enforcement and diagnostic settings</li>
+<li>Automated deployment with Terraform and a CI pipeline that enforces plan validation</li>
+</ul>
+<h4>Outcome</h4>
+<p>Reduced misconfiguration risk, improved visibility in a centralised log subscription, and shortened onboarding time for new subscriptions.</p>
+<p style="color:var(--muted)">Note: this case is redacted — links to code and full diagrams are available on request.</p>
+ 
+        `
+ 
+      },
+ 
+      "project-2": {
+ 
+        title: "Phishing Incident Response",
+ 
+        subtitle: "SIEM • Playbooks • Detection",
+ 
+        body: `
+<p><strong>Summary</strong> — Rapid triage of a targeted phishing campaign; produced IOCs, updated detections and a remediation playbook for the SOC.</p>
+<h4>Approach</h4>
+<ol>
+<li>Collected email headers and attachments for analysis</li>
+<li>Pivoted through logs to identify lateral movement and suspicious authentications</li>
+<li>Created detections in the SIEM and automated response steps</li>
+</ol>
+<h4>Result</h4>
+<p>Containment within 8 hours; detections reduced recurrence and recovery time.</p>
+ 
+        `
+ 
+      },
+ 
+      "project-3": {
+ 
+        title: "Automated Asset Inventory",
+ 
+        subtitle: "Python • Cloud APIs",
+ 
+        body: `
+<p><strong>Summary</strong> — A small Python CLI that interrogates cloud APIs to enumerate resources and produce a CSV asset register with tags for risk scoring.</p>
+<h4>Why</h4>
+<p>Many organisations struggle to maintain an authoritative asset list across multiple cloud accounts.</p>
+<h4>How</h4>
+<p>Script uses SDKs to fetch resources, normalises names, and exports metadata. Open-sourced under MIT — <a href=https://github.com/yourusername/asset-inventory target="_blank">repo</a>.</p>
+ 
+        `
+ 
+      },
+ 
+      "soon": {
+ 
+        title: "Coming soon",
+ 
+        subtitle: "",
+ 
+        body: "<p>This case study is not yet public — contact me for more information.</p>"
+ 
+      }
+ 
+    };
+ 
+    // open modal with case content
+ 
+    document.querySelectorAll('[data-open]').forEach(btn=>{
+ 
+      btn.addEventListener('click', (e)=>{
+ 
+        const id = btn.getAttribute('data-open');
+ 
+        openCase(id);
+ 
+      });
+ 
+    });
+ 
+    function openCase(id){
+ 
+      const data = cases[id] || {title:"Case study", body:"<p>Not found</p>"};
+ 
+      modalContent.innerHTML = '<h2 style="margin-top:0">'+(data.title||'')+'</h2>' + (data.subtitle?('<div style="color:var(--muted)">'+data.subtitle+'</div>'):'') + (data.body||'');
+ 
+      modal.classList.add('open');
+ 
+      modal.setAttribute('aria-hidden','false');
+ 
+      document.body.style.overflow = 'hidden';
+ 
+    }
+ 
+    function closeModal(){
+ 
+      modal.classList.remove('open');
+ 
+      modal.setAttribute('aria-hidden','true');
+ 
+      document.body.style.overflow = '';
+ 
+    }
+ 
+    // Escape to close modal
+ 
+    document.addEventListener('keydown',(e)=>{
+ 
+      if(e.key==='Escape') closeModal();
+ 
+    });
+ 
+    // Simple contact form handling (no backend) - opens mailto fallback
+ 
+    function submitContact(e){
+ 
+      e.preventDefault();
+ 
+      const form = e.target;
+ 
+      const name = encodeURIComponent(form.name.value.trim());
+ 
+      const email = encodeURIComponent(form.email.value.trim());
+ 
+      const msg = encodeURIComponent(form.message.value.trim());
+ 
+      const subject = encodeURIComponent('Website contact from ' + (form.name.value.trim() || 'Website visitor'));
+ 
+      const body = encodeURIComponent(`Name: ${form.name.value}\nEmail: ${form.email.value}\n\nMessage:\n${form.message.value}`);
+ 
+      // Try to open mail client - users hosting with a server should replace this with a real POST endpoint
+ 
+      window.location.href = `mailto:you@sgcs.uk?subject=${subject}&body=${body}`;
+ 
+      document.getElementById('formMsg').textContent = "Opening your mail client... If nothing opens, please email you@sgcs.uk directly.";
+ 
+    }
+	
+	// Light/Dark theme toggle
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+if(localStorage.getItem('theme')==='light'){
+  body.classList.add('light-theme');
+  themeToggle.textContent='🌞 Dark Mode';
 }
+themeToggle.addEventListener('click',()=>{
+  body.classList.toggle('light-theme');
+  const isLight=body.classList.contains('light-theme');
+  themeToggle.textContent=isLight?'🌞 Dark Mode':'🌙 Light Mode';
+  localStorage.setItem('theme',isLight?'light':'dark');
+});
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #161b22;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar .logo { font-weight: 600; color: #58a6ff; }
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #e6edf3;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover { color: #58a6ff; }
-
-.section {
-  padding: 5rem 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-.hero { text-align: center; padding-top: 7rem; }
-.hero h1 { font-size: 2.5rem; color: #58a6ff; }
-
-.card-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-top: 2rem;
-}
-
-.card {
-  background: #161b22;
-  padding: 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  background: #1f2630;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.7);
-}
-
-.modal-content {
-  background-color: #161b22;
-  margin: 10% auto;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 700px;
-  color: #e6edf3;
-}
-
-.close {
-  float: right;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #58a6ff;
-}
-.close:hover { color: #e6edf3; }
+// Make entire project boxes clickable
+document.querySelectorAll('.project').forEach(proj=>{
+  const id=proj.getAttribute('data-case');
+  if(id){
+    proj.style.cursor='pointer';
+    proj.addEventListener('click',(e)=>{
+      if(e.target.closest('button,a')) return;
+      openCase(id);
+    });
+  }
+});
