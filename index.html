@@ -280,6 +280,33 @@
       header{align-items:flex-start;gap:8px}
  
     }
+	
+	/* light theme overrides */
+body.light-theme {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --muted: #333b47;
+  --accent: #007bff;
+  --glass: rgba(0,0,0,0.05);
+  color: #0b1220;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eaeef5 100%);
+}
+body.light-theme .btn {
+  background: rgba(0,0,0,0.05);
+  color: #0b1220;
+}
+body.light-theme .btn.primary {
+  background: linear-gradient(90deg, var(--accent), #00c9a7);
+  color: white;
+}
+body.light-theme nav a:hover { color: var(--accent); }
+body.light-theme .about-card {
+  background: #ffffff;
+  color: #0b1220;
+  border-color: rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
 </style>
 </head>
 <body>
@@ -288,24 +315,25 @@
 <a class="brand" href="#">
 <div class="logo">SG</div>
 <div>
-<div style="font-weight:800">SGCS</div>
+<div style="font-weight:800">Sam Gresty</div>
 <div style="font-size:12px;color:var(--muted)">Cybersecurity Portfolio</div>
 </div>
 </a>
 <nav>
-<a href="#projects">Projects</a>
-<a href="#blog">Blog</a>
-<a href="#certs">Certs</a>
+<a href="#projects">About</a>
+<a href="#blog">Projects</a>
+<a href="#certs">Certifications</a>
 <a href="#contact">Contact</a>
 </nav>
+<button id="themeToggle" class="btn" style="font-size:13px;">🌙 Toggle Theme</button>
 </header>
 <main>
 <!-- HERO -->
 <section class="hero">
 <div class="hero-card">
-<div class="tag">Cybersecurity • Cloud • Incident Response</div>
-<h1>Hi — I’m <span style="color:var(--accent)">SGCS</span>, a Cybersecurity Analyst building cloud security expertise.</h1>
-<p class="lead">I design secure cloud environments, run incident response investigations, and build automation to reduce mean time to detect & respond. Below are redacted case studies, projects and resources illustrating my work.</p>
+<div class="tag">Cybersecurity • Threat • Operations</div>
+<h1>Hi — I’m <span style="color:var(--accent)">Sam</span>, a Cybersecurity Analyst building an online portfolio.</h1>
+<p class="lead">I monitor, detect and respond to Cybersecurity threats, investigating incidents and managing vulnerabilites and patching to protect systems and data. Below are redacted case studies, projects and resources illustrating my work.</p>
 <div class="cta">
 <a class="btn primary" href="#projects">See Projects</a>
 <a class="btn" href=mailto:you@sgcs.uk?subject=Website%20enquiry>Contact</a>
@@ -313,25 +341,25 @@
 </div>
 <div class="snapshot" aria-hidden="true">
 <div class="stat">
-<strong>6</strong>
+<strong>5+</strong>
  
-              Case Studies
+              Years IT Experience
 </div>
 <div class="stat">
 <strong>10+</strong>
  
-              Certifications
+              Projects
 </div>
 <div class="stat">
-<strong>5</strong>
+<strong>1</strong>
  
-              Open-source tools
+              Certifications
 </div>
 </div>
 <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:18px 0">
 <div>
-<strong style="display:block">Featured project — Cloud Tenant Hardening</strong>
-<p style="margin:6px 0;color:var(--muted)">Implemented a landing zone and guardrails in Azure using Terraform to reduce attack surface and enforce least privilege across subscriptions.</p>
+<strong style="display:block">Current Project — Rebuilding the Portfolio</strong>
+<p style="margin:6px 0;color:var(--muted)">Upgrading my Portfolio from a basic website into something more informational, with a professional look and feel.</p>
 <div style="display:flex;gap:8px;margin-top:10px">
 <a class="btn" href="#project-1">Read case</a>
 <a class="btn" href=https://github.com/yourusername target="_blank" rel="noopener">View code</a>
@@ -343,31 +371,31 @@
 <div style="margin-top:12px">
 <div style="display:flex;justify-content:space-between;align-items:center">
 <div>
-<div style="font-weight:700">SGCS</div>
+<div style="font-weight:700">Sam Gresty</div>
 <div style="color:var(--muted);font-size:13px">Junior Cybersecurity Analyst ➜ Cloud Security</div>
 </div>
-<div style="text-align:right;color:var(--muted);font-size:13px">Based in: London, UK</div>
+<div style="text-align:right;color:var(--muted);font-size:13px">Based in: Chesterfield, UK</div>
 </div>
 <div class="skills">
 <div style="font-weight:700;margin-top:10px">Core skills</div>
 <div class="skill">
-<div>Azure / IAM</div>
+<div>Vulnerability / Patch Management</div>
 <div style="color:var(--muted)">Advanced</div>
 </div>
-<div class="bar"><i style="width:86%"></i></div>
+<div class="bar"><i style="width:75%"></i></div>
 <div class="skill">
 <div>Incident Response</div>
-<div style="color:var(--muted)">Mid</div>
+<div style="color:var(--muted)">Intermediate</div>
 </div>
-<div class="bar"><i style="width:72%"></i></div>
+<div class="bar"><i style="width:60%"></i></div>
 <div class="skill">
-<div>Python / Automation</div>
-<div style="color:var(--muted)">Mid</div>
+<div>Microsoft Admin Suite</div>
+<div style="color:var(--muted)">Advanced</div>
 </div>
-<div class="bar"><i style="width:65%"></i></div>
+<div class="bar"><i style="width:70%"></i></div>
 <div style="margin-top:10px;font-size:13px;color:var(--muted)">
  
-                Open to roles: Cloud Security Engineer, Security Automation, IR
+                Open to roles: Cybersecurity Analyst, Cybersecurity Engineer, Cloud Security Analyst
 </div>
 </div>
 </div>
@@ -415,6 +443,20 @@
 <div class="tags">
 <span class="tag-pill">Python</span>
 <span class="tag-pill">Open-source</span>
+</div>
+<div class="more">
+<small style="color:var(--muted)">Repo</small>
+<a class="btn view-btn" href=https://github.com/yourusername/repo target="_blank" rel="noopener">GitHub</a>
+</div>
+</article>
+<!-- Project 4 -->
+<article class="project" data-case="project-4" id="project-4">
+<div class="meta">Testomg</div>
+<h3>Inventory Testing</h3>
+<p>Lightweight Python tool that inventories cloud assets and exports an asset register for risk scoring and remediation prioritisation.</p>
+<div class="tags">
+<span class="tag-pill">Testing</span>
+<span class="tag-pill">test</span>
 </div>
 <div class="more">
 <small style="color:var(--muted)">Repo</small>
@@ -719,6 +761,33 @@
       document.getElementById('formMsg').textContent = "Opening your mail client... If nothing opens, please email you@sgcs.uk directly.";
  
     }
+	
+	// Light/Dark theme toggle
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+if(localStorage.getItem('theme')==='light'){
+  body.classList.add('light-theme');
+  themeToggle.textContent='🌞 Dark Mode';
+}
+themeToggle.addEventListener('click',()=>{
+  body.classList.toggle('light-theme');
+  const isLight=body.classList.contains('light-theme');
+  themeToggle.textContent=isLight?'🌞 Dark Mode':'🌙 Light Mode';
+  localStorage.setItem('theme',isLight?'light':'dark');
+});
+
+// Make entire project boxes clickable
+document.querySelectorAll('.project').forEach(proj=>{
+  const id=proj.getAttribute('data-case');
+  if(id){
+    proj.style.cursor='pointer';
+    proj.addEventListener('click',(e)=>{
+      if(e.target.closest('button,a')) return;
+      openCase(id);
+    });
+  }
+});
+	
 </script>
 </body>
 </html>
