@@ -508,20 +508,38 @@ body.light-theme .about-card {
 <div class="cert">Github</div>
 </div>
 </section>
+
 <!-- CONTACT -->
-<div class="contact-grid">
-<h2>Reach me</h2>
 <section id="contact" class="section">
-<hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:18px 0">
-<div style="color:var(--muted);margin-top:8px">Email: <a href=mailto:Sam@sgcs.uk style="color:var(--accent)">Sam@sgcs.uk</a></div>
-<div style="color:var(--muted);margin-top:8px">LinkedIn: <a href=www.linkedin.com/in/samuel-gresty target="_blank" style="color:var(--accent)">Samuel Gresty</a></div>
-<div style="color:var(--muted);margin-top:8px">GitHub: <a href=https://github.com/Github-SGCS target="_blank" style="color:var(--accent)">Github-SGCS</a></div>
+<h2>Contact</h2>
+<div class="contact-grid">
+<div class="contact-card">
+<p style="color:var(--muted)">I'm happy to discuss collaboration, open roles, or give feedback on security projects. If you'd like to request a redacted case study or confirm certs, drop a message below or email me directly.</p>
+<form id="contactForm" onsubmit="submitContact(event)" style="margin-top:12px">
+<label style="font-size:13px;color:var(--muted)">Your name</label><br>
+<input required name="name" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:6px"><br>
+<label style="font-size:13px;color:var(--muted);margin-top:8px;display:block">Email</label>
+<input required type="email" name="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:6px"><br>
+<label style="font-size:13px;color:var(--muted);margin-top:8px;display:block">Message</label>
+<textarea required name="message" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:6px"></textarea>
+<div style="margin-top:12px;display:flex;gap:10px">
+<button class="btn primary" type="submit">Send message</button>
+<a class="btn" href="mailto:you@sgcs.uk?subject=Contact%20via%20site">Email directly</a>
+</div>
+<div id="formMsg" style="margin-top:10px;color:var(--muted);font-size:13px"></div>
+</form>
+</div>
+<aside class="contact-card">
+<div style="font-weight:700">Reach me</div>
+<div style="color:var(--muted);margin-top:8px">Email: <a href="mailto:you@sgcs.uk" style="color:var(--accent)">you@sgcs.uk</a></div>
+<div style="color:var(--muted);margin-top:8px">LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" style="color:var(--accent)">yourprofile</a></div>
+<div style="color:var(--muted);margin-top:8px">GitHub: <a href="https://github.com/yourusername" target="_blank" style="color:var(--accent)">yourusername</a></div>
 <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
 <div style="font-size:13px;color:var(--muted)">Availability: Open to work & contract engagements.</div>
+<div style="margin-top:12px">
 </div>
 </div>
 </aside>
-</div>
 </section>
 </main>
 <footer>
@@ -530,7 +548,7 @@ body.light-theme .about-card {
 <a class="social" href=https://github.com/Github-SGCS target="_blank">GitHub</a>
 <a class="social" href=www.linkedin.com/in/samuel-gresty target="_blank">LinkedIn</a>
 <a class="social" href=mailto:Sam@sgcs.uk>Email</a>
-</div>
+</div>	
 </footer>
 </div>
 <!-- Modal for expanded case studies -->
