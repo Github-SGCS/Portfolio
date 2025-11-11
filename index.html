@@ -1,3 +1,5 @@
+<!-- HTML-->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,7 +14,13 @@
 <!-- Simple reset + Google fonts -->
 <link href=https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap rel="stylesheet">
 <style>
+
+
+
+<!-- CSS -->
+
  
+
     :root{
  
       --bg:#0b1220;
@@ -195,7 +203,7 @@
  
     .section h2{margin:0 0 12px 0}
  
-    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px}
  
     .project{
  
@@ -307,6 +315,12 @@ body.light-theme .about-card {
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
+
+
+<!-- PORTFOLIO -->
+
+
+
 </style>
 </head>
 <body>
@@ -362,7 +376,7 @@ body.light-theme .about-card {
 <p style="margin:6px 0;color:var(--muted)">This site is a work in progress as i continue rebranding and updating it in my spare time. Thank you for your patience.</p>
 <div style="display:flex;gap:8px;margin-top:10px">
 <a class="btn" href="#project-7">Read case</a>
-<a class="btn" href=https://github.com/yourusername target="_blank" rel="noopener">View code</a>
+<a class="btn" href=https://github.com/Github-SGCS/Templates/blob/main/Website target="_blank" rel="noopener">Site Template</a>
 </div>
 </div>
 </div>
@@ -446,7 +460,7 @@ body.light-theme .about-card {
 <span class="tag-pill">Write-up</span>
 </div>
 <div class="more">
-<small style="color:var(--muted)">Repo</small>
+<small style="color:var(--muted)">3 Hours</small>
 <a class="btn view-btn" href=https://github.com/yourusername/repo target="_blank" rel="noopener">GitHub</a>
 </div>
 </article>
@@ -461,7 +475,7 @@ body.light-theme .about-card {
 <span class="tag-pill">Microsoft Word</span>
 </div>
 <div class="more">
-<small style="color:var(--muted)">Repo</small>
+<small style="color:var(--muted)">5 Hours</small>
 <a class="btn view-btn" href=https://github.com/yourusername/repo target="_blank" rel="noopener">GitHub</a>
 </div>
 </article>
@@ -476,7 +490,7 @@ body.light-theme .about-card {
 <span class="tag-pill">vulnerabilites</span>
 </div>
 <div class="more">
-<small style="color:var(--muted)">7 days</small>
+<small style="color:var(--muted)">1 day</small>
 <button class="btn view-btn" data-open="project-5">View Case</button>
 </div>
 </article>
@@ -491,11 +505,33 @@ body.light-theme .about-card {
 <span class="tag-pill">Cyber Essentials</span>
 </div>
 <div class="more">
-<small style="color:var(--muted)">2 days</small>
+<small style="color:var(--muted)">2 Hours</small>
 <button class="btn view-btn" data-open="project-6">View Case</button>
 </div>
 </article>
+<!-- Project 7 -->
+<article class="project" data-case="project-7" id="project-7">
+<div class="meta">HTML • Rebrand • Experimentation</div>
+<h3>Testing the Projects for online upload</h3>
+<p>I have used an old portfolio for some time and it wasnt working for me so i have decided to test my skills and knoweldge and build a new portfolio.</p>
+<div class="tags">
+<span class="tag-pill">Scripting</span>
+<span class="tag-pill">HTML</span>
+<span class="tag-pill">Refreshed Look</span>
 </div>
+<div class="more">
+<small style="color:var(--muted)">2 Months</small>
+<button class="btn view-btn" data-open="project-7">View Case</button>
+</div>
+</article>
+
+
+
+
+<!-- THIS CLOSES OFF PROJECTS!!! -->
+</div>
+
+
 <!-- CERTIFICATIONS -->
 <section id="certifications" class="section">
 <h2>Certifications & Skills</h2>
@@ -527,6 +563,7 @@ body.light-theme .about-card {
 <div class="cert">MX tool box</div>
 <div class="cert">Any Run</div>
 <div class="cert">DNS Dumpster</div>
+<div class="cert">Arctic Wolf</div>
 </div>
 </section>
 
@@ -581,6 +618,12 @@ body.light-theme .about-card {
 </div>
 </div>
 <script>
+
+
+
+<!-- Javascript -->
+
+
  
     // Basic interactive behaviors (no frameworks)
  
@@ -687,7 +730,7 @@ body.light-theme .about-card {
         `
       },
 	  
-	        "project-6": {
+	  "project-6": {
  
         title: "Risk Appetite Statement",
  
@@ -703,9 +746,9 @@ body.light-theme .about-card {
         `
       },
  
- 	        "project-7": {
+	  "project-7": {
  
-        title: "Portfolio Rebrand",
+        title: "Testing the Projects for online upload",
  
         subtitle: "HTML • Rebrand • Experimentation",
  
@@ -715,8 +758,7 @@ body.light-theme .about-card {
 <p>It was needed to assist me in my Job search and look more professinal to recruiters</p>
 <h4>How i did it?</h4>
 <p> Click here to see a full before and after version of my portfolio as a PDF version— <a href=https://github.com/yourusername/asset-inventory target="_blank">repo</a>.</p>
- 
-        `
+   `
       },
  
  
