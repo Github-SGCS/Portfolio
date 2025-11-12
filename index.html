@@ -105,21 +105,22 @@
     }
  
     .logo{
- 
-      width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#00ffc9);
- 
-      display:flex;align-items:center;justify-content:center;font-weight:800;color:#061020;
- 
-      box-shadow:0 6px 20px rgba(0,0,0,0.6);
- 
-    }
- 
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
- 
-    nav a:hover{color:var(--accent)}
- 
-    main{display:block;background:transparent}
- 
+  width:125px;
+  height:125px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.logo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:14px;
+}
+
     .hero{
  
       display:grid;
@@ -289,34 +290,61 @@
     }
 	
 	/* light theme overrides */
-body.light-theme {
-  --bg: #f7f9fc;
-  --card: #ffffff;
-  --muted: #333b47;
-  --accent: #007bff;
-  --glass: rgba(0,0,0,0.05);
-  color: #0b1220;
-  background: linear-gradient(180deg, #f7f9fc 0%, #eaeef5 100%);
-}
-body.light-theme .btn {
-  background: rgba(0,0,0,0.05);
-  color: #0b1220;
-}
-body.light-theme .btn.primary {
-  background: linear-gradient(90deg, var(--accent), #00c9a7);
-  color: white;
-}
-body.light-theme nav a:hover { color: var(--accent); }
-body.light-theme .about-card {
-  background: #ffffff;
-  color: #0b1220;
-  border-color: rgba(0,0,0,0.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
+		body.light-theme {
+		--bg: #f7f9fc;
+		--card: #ffffff;
+		--muted: #333b47;
+		--accent: #007bff;
+		--glass: rgba(0,0,0,0.05);
+		color: #0b1220;
+		background: linear-gradient(180deg, #f7f9fc 0%, #eaeef5 100%);
+	}
+
+	body.light-theme .btn {
+		background: rgba(0,0,0,0.05);
+		color: #0b1220;
+	}
+
+	body.light-theme .btn.primary {
+		background: linear-gradient(90deg, var(--accent), #00c9a7);
+		color: white;
+	}
+
+	body.light-theme nav a:hover { color: var(--accent); }
+		body.light-theme .about-card {
+			background: #ffffff;
+			color: #0b1220;
+			border-color: rgba(0,0,0,0.05);
+			box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+	}
+	
+	body.light-theme .logo img {
+		content: url("https://raw.githubusercontent.com/Github-SGCS/Portfolio/main/Brackets_Black.png");
+	}
 
 
+	/* Ensure nav links look clean */
+		nav a {
+		color: var(--muted);
+		text-decoration: none !important;
+		margin-left: 18px;
+		font-weight: 600;
+		font-size: 14px;
+	}
 
-<!-- PORTFOLIO -->
+		nav a:visited {
+		color: var(--muted);
+	}
+
+		nav a:hover {
+		color: var(--accent);
+		text-decoration: none;
+	}
+	
+	
+
+
+/* PORTFOLIO */
 
 
 
@@ -325,20 +353,25 @@ body.light-theme .about-card {
 <body>
 <div class="site">
 <header>
-<a class="brand" href="#">
-<div class="logo">SG</div>
-<div>
-<div style="font-weight:800">Sam Gresty</div>
-<div style="font-size:12px;color:var(--muted)">Cybersecurity Portfolio</div>
-</div>
-</a>
-<nav>
-<a href="#projects">Projects</a>
-<a href="#certifications">Certifications</a>
-<a href="#contact">Contact</a>
-</nav>
-<button id="themeToggle" class="btn" style="font-size:13px;">🌙 Toggle Theme</button>
+  <a class="brand" href="#">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/Github-SGCS/Portfolio/main/Brackets_White.png" alt="SGCS Logo">
+    </div>
+    <div>
+      <div style="font-weight:800">Sam Gresty</div>
+      <div style="font-size:12px;color:var(--muted)">Cybersecurity Analyst</div>
+    </div>
+  </a>
+
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button id="themeToggle" class="btn" style="font-size:13px;">🌙 Toggle Theme</button>
 </header>
+
 <main>
 <!-- HERO -->
 <section class="hero">
@@ -380,7 +413,7 @@ body.light-theme .about-card {
 </div>
 </div>
 <aside class="right-profile">
-<img src="https://media.licdn.com/dms/image/v2/D4E03AQHq6rQOwCwShw/profile-displayphoto-scale_400_400/B4EZi5gUMuGcAg-/0/1755458914315?e=2147483647&v=beta&t=0ORhLDrNGskZ3hHwd5Jg1jSXey4zWorHXmDwmj4fiog" alt="My LinkedIn Photo"
+<img src="https://media.licdn.com/dms/image/v2/D4E03AQHq6rQOwCwShw/profile-displayphoto-scale_400_400/B4EZi5gUMuGcAg-/0/1755458914315?e=2147483647&v=beta&t=0ORhLDrNGskZ3hHwd5Jg1jSXey4zWorHXmDwmj4fiog" alt="My LinkedIn Photo">
 <div style="margin-top:12px">
 <div style="display:flex;justify-content:space-between;align-items:center">
 <div>
@@ -521,6 +554,21 @@ body.light-theme .about-card {
 <div class="more">
 <small style="color:var(--muted)">2 Months</small>
 <button class="btn view-btn" data-open="project-7">View Case</button>
+</div>
+</article>
+<!-- Project 8 -->
+<article class="project" data-case="project-8" id="project-8">
+<div class="meta">Vulnerability • Defender • KQL</div>
+<h3>Weakness Report</h3>
+<p>Weakness reports for that effect our organisation, Using KQL, Defender and excel</p>
+<div class="tags">
+<span class="tag-pill">KQL</span>
+<span class="tag-pill">Excel</span>
+<span class="tag-pill">Colaboration</span>
+</div>
+<div class="more">
+<small style="color:var(--muted)">2 Months</small>
+<button class="btn view-btn" data-open="project-8">View Case</button>
 </div>
 </article>
 
@@ -759,7 +807,22 @@ body.light-theme .about-card {
 <p> Click here to see a full before and after version of my portfolio as a PDF version— <a href=https://github.com/yourusername/asset-inventory target="_blank">repo</a>.</p>
    `
       },
+
+	 "project-8": {
  
+        title: "Weakness Report",
+ 
+        subtitle: "Vulnerability • Defender • KQL",
+ 
+        body: `
+<p><strong>Summary</strong> - showcasing how i would run weakness reports using KQL, Defender weaknesses to build a report that we can share with other teams to help improve our security posture.</p>
+<h4>Why</h4>
+<p>showcases to the business the ongoing issues with open vulnerabilities</p>
+<h4>How</h4>
+<p> Click here to see a PDF version of the document— <a href=https://github.com/yourusername/asset-inventory target="_blank">repo</a>.</p>
+ 
+        `
+      },
  
       "soon": {
  
