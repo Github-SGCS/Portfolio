@@ -1102,7 +1102,12 @@ document.querySelectorAll('.project').forEach(proj=>{
     });
   }
 });
-	
+
+function openProjectPopup(id) {
+  const popup = document.getElementById(`project-${id}`);
+  popup.classList.add("open");
+}
+
 </script>
 </body>
 </html>
