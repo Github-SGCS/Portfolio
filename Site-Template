@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfolio Template</title>
+<meta name="description" content="Portfolio Template"/>
+<meta property="og:title" content="Portfolio Template" />
+<meta property="og:description" content="Portfolio, projects, case studies." />
+<meta name="theme-color" content="#0b1220" />
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==============
+   GLOBAL STYLES
+   ============== */
+:root{
+  --bg:#0b1220;
+  --card:#0f1724;
+  --muted:#a7b0c8;
+  --accent:#17a2ff;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --maxWidth:1100px;
+  color-scheme: dark;
+}
+
+*{ box-sizing:border-box }
+html,body{ height:100% }
+
+body{
+  margin:0;
+  font-family:Inter,system-ui;
+  background:linear-gradient(180deg,var(--bg) 0%, #071024 100%);
+  color:#e6eef8;
+  padding:32px;
+  line-height:1.5;
+}
+
+/* ==============
+   LAYOUT
+   ============== */
+
+.site{
+  max-width:var(--maxWidth);
+  margin:0 auto;
+  display:block;
+  gap:32px;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:28px;
+  gap:16px;
+}
+
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  text-decoration:none;
+  color:inherit;
+}
+
+.logo{
+  width:110px;
+  height:110px;
+  border-radius:14px;
+  background:var(--glass);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* NAV */
+nav a{
+  color:var(--muted);
+  margin-left:18px;
+  font-weight:600;
+  font-size:14px;
+  text-decoration:none;
+}
+nav a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:28px;
+  margin-bottom:28px;
+}
+
+.hero-card{
+  background:var(--glass);
+  padding:28px;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.03);
+  box-shadow:0 8px 30px rgba(3,8,22,0.6);
+}
+
+.tag{ color:var(--accent); font-weight:700; margin-bottom:12px }
+
+h1{ font-size:28px; margin:0 0 10px }
+
+p.lead{ color:var(--muted); margin:6px 0 18px }
+
+/* BUTTONS */
+.cta{ display:flex; gap:12px; margin-top:18px }
+.btn{
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:14px;
+  text-decoration:none;
+  color:inherit;
+  background:var(--glass);
+  border:1px solid rgba(255,255,255,0.04);
+  transition:0.15s;
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(23,162,255,0.08);
+}
+.btn.primary{
+  background:linear-gradient(90deg,var(--accent),#00ffc9);
+  color:#041025;
+  border:none;
+}
+
+/* ASIDE */
+.right-profile{
+  padding:10px;
+  border-radius:var(--radius);
+  background:var(--glass);
+  border:1px solid rgba(255,255,255,0.03);
+  box-shadow:0 6px 18px rgba(3,8,22,0.6);
+}
+
+.right-profile img{
+  width:100%;
+  height:220px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+/* PROJECTS */
+.section{ margin-top:40px }
+.section h2{ margin:0 0 12px }
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:16px;
+}
+
+.project{
+  background:var(--card);
+  padding:16px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.02);
+  transition:0.2s;
+}
+.project:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 40px rgba(2,6,18,0.6);
+}
+
+.project .meta{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.project .tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.tag-pill{
+  padding:6px 8px;
+  border-radius:8px;
+  font-size:12px;
+  background:rgba(255,255,255,0.03);
+  color:var(--muted);
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:16px;
+}
+.contact-card{
+  background:var(--card);
+  padding:16px;
+  border-radius:12px;
+}
+
+/* FOOTER */
+footer{
+  margin-top:32px;
+  font-size:13px;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+a.social{
+  color:var(--muted);
+  margin-left:12px;
+  text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media (max-width:980px){
+  .hero{ grid-template-columns:1fr }
+}
+@media (max-width:640px){
+  body{ padding:18px }
+  nav a{ display:none }
+  .projects-grid{ grid-template-columns:1fr }
+}
+</style>
+</head>
+
+<body>
+<div class="site">
+
+<header>
+  <a class="brand" href="#">
+    <div class="logo"><!-- Insert logo image -->
+      <img src="your-logo.png" alt="Logo">
+    </div>
+    <div>
+      <div style="font-weight:800">Your Name</div>
+      <div style="font-size:12px;color:var(--muted)">Your Job Title</div>
+    </div>
+  </a>
+
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button id="themeToggle" class="btn" style="font-size:13px;">🌙 Toggle Theme</button>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-card">
+    <div class="tag">Your Tagline</div>
+
+    <h1>Hi, I'm <span style="color:var(--accent)">Your Name</span>.</h1>
+    <p class="lead">Short intro text goes here.</p>
+    <p class="lead">Add another line here if needed.</p>
+
+    <div class="cta">
+      <a class="btn primary" href="#projects">See Projects</a>
+      <a class="btn" href="#">Contact</a>
+      <a class="btn" href="#" download>Download CV</a>
+    </div>
+  </div>
+
+  <aside class="right-profile">
+    <img src="your-photo.jpg" alt="Profile photo">
+  </aside>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Projects & Case Studies</h2>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT TEMPLATE (duplicate as needed) -->
+    <article class="project" data-case="project-1">
+      <div class="meta">Skills • Tools • Tags</div>
+      <h3>Project Title</h3>
+      <p>Short description of the project.</p>
+      <div class="tags">
+        <span class="tag-pill">Tag</span>
+        <span class="tag-pill">Tag</span>
+      </div>
+      <div class="more" style="margin-top:10px">
+        <button class="btn view-btn" data-open="project-1">View Case</button>
+      </div>
+    </article>
+
+    <!-- Duplicate project cards -->
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <p style="color:var(--muted)">Optional intro text for contact.</p>
+
+      <form id="contactForm" onsubmit="submitContact(event)">
+        <label>Your Name</label>
+        <input required name="name">
+
+        <label style="margin-top:10px">Email</label>
+        <input required type="email" name="email">
+
+        <label style="margin-top:10px">Message</label>
+        <textarea required rows="4" name="message"></textarea>
+
+        <div style="margin-top:12px; display:flex; gap:10px">
+          <button class="btn primary">Send Message</button>
+        </div>
+      </form>
+    </div>
+
+    <aside class="contact-card">
+      <div><strong>Reach me</strong></div>
+      <div style="color:var(--muted);margin-top:8px">Email: <a href="#" style="color:var(--accent)">your@email.com</a></div>
+      <div style="color:var(--muted);margin-top:8px">LinkedIn: <a href="#" style="color:var(--accent)">Profile</a></div>
+      <div style="color:var(--muted);margin-top:8px">GitHub: <a href="#" style="color:var(--accent)">GitHub</a></div>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Your Name</div>
+  <div>Made with HTML • Hosted anywhere</div>
+  <div>
+    <a class="social" href="#">GitHub</a>
+    <a class="social" href="#">LinkedIn</a>
+  </div>
+</footer>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal" style="display:none">
+  <div class="modal-card">
+    <button class="close" onclick="closeModal()">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* CASE STUDY CONTENT — EMPTY TEMPLATE */
+const cases = {
+  "project-1": {
+    title: "Project Title",
+    subtitle: "Subtitle",
+    body: `<p>Write detailed project content here.</p>`
+  }
+};
+
+/* OPEN MODAL */
+document.querySelectorAll("[data-open]").forEach(b=>{
+  b.onclick = ()=>openCase(b.dataset.open);
+});
+
+function openCase(id){
+  const data = cases[id];
+  const content = `
+    <h2>${data.title}</h2>
+    <p><em>${data.subtitle}</em></p>
+    ${data.body}
+  `;
+  document.getElementById("modalContent").innerHTML = content;
+  document.getElementById("modal").style.display = "flex";
+}
+
+/* CLOSE MODAL */
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
