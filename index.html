@@ -408,6 +408,8 @@ Response, vulnerability and risk management." />
 <strong style="display:block">Please note:</strong>
 <p style="margin:6px 0;color:var(--muted)"> This site is a work in progress as I continue rebranding and updating it in my spare time. Thank you for your patience.</p>
 <div style="display:flex;gap:8px;margin-top:10px">
+
+  <!-- PROJECT BUTTON - Change Project Number when making a new Project -->
 <a class="btn" href="#project-11"
    onclick="event.preventDefault(); openProjectPopup(11);">
    Current Project
@@ -746,8 +748,6 @@ Response, vulnerability and risk management." />
 </div>
 </div>
 <script>
-
-
 
 // Javascript (JS)
 
@@ -1103,10 +1103,12 @@ document.querySelectorAll('.project').forEach(proj=>{
   }
 });
 
-function openProjectPopup(id) {
-  const popup = document.getElementById(`project-${id}`);
-  popup.classList.add("open");
+// Popup - Current Project Button
+function openProjectPopup(number){
+  const id = `project-${number}`;
+  openCase(id);
 }
+
 
 </script>
 </body>
