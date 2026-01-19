@@ -1,240 +1,310 @@
+<!-- HTML-->
+
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Portfolio Template</title>
-<meta name="description" content="Portfolio Template"/>
-<meta property="og:title" content="Portfolio Template" />
-<meta property="og:description" content="Portfolio, projects, case studies." />
-<meta name="theme-color" content="#0b1220" />
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Professional Portfolio</title>
+  <meta name="description" content="A professional portfolio showcasing projects, skills, and case studies." />
+  <meta property="og:title" content="Professional Portfolio" />
+  <meta property="og:description" content="A clean, modern portfolio template." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #0f1724;
+      --muted: #a7b0c8;
+      --accent: #17a2ff;
+      --accent-soft: rgba(23,162,255,0.12);
+      --glass: rgba(255,255,255,0.03);
+      --radius: 12px;
+      --maxWidth: 1100px;
+      --border-subtle: rgba(255,255,255,0.04);
+      --shadow-soft: 0 8px 30px rgba(3,8,22,0.6);
+      color-scheme: dark;
+    }
 
-<style>
-/* ==============
-   GLOBAL STYLES
-   ============== */
-:root{
-  --bg:#0b1220;
-  --card:#0f1724;
-  --muted:#a7b0c8;
-  --accent:#17a2ff;
-  --glass: rgba(255,255,255,0.03);
-  --radius:12px;
-  --maxWidth:1100px;
-  color-scheme: dark;
-}
+    * { box-sizing: border-box; }
 
-*{ box-sizing:border-box }
-html,body{ height:100% }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--bg) 0%, #071024 100%);
+      color: #e6eef8;
+      padding: 32px;
+      line-height: 1.5;
+    }
 
-body{
-  margin:0;
-  font-family:Inter,system-ui;
-  background:linear-gradient(180deg,var(--bg) 0%, #071024 100%);
-  color:#e6eef8;
-  padding:32px;
-  line-height:1.5;
-}
+    .site {
+      max-width: var(--maxWidth);
+      margin: 0 auto;
+      display: block;
+    }
 
-/* ==============
-   LAYOUT
-   ============== */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
 
-.site{
-  max-width:var(--maxWidth);
-  margin:0 auto;
-  display:block;
-  gap:32px;
-}
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
 
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:28px;
-  gap:16px;
-}
+    .logo {
+      width: 125px;
+      height: 125px;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.brand{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  text-decoration:none;
-  color:inherit;
-}
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+    }
 
-.logo{
-  width:110px;
-  height:110px;
-  border-radius:14px;
-  background:var(--glass);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  overflow:hidden;
-}
+    nav a {
+      color: var(--muted);
+      margin-left: 18px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
 
-.logo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+    nav a:hover { color: var(--accent); }
 
-/* NAV */
-nav a{
-  color:var(--muted);
-  margin-left:18px;
-  font-weight:600;
-  font-size:14px;
-  text-decoration:none;
-}
-nav a:hover{
-  color:var(--accent);
-}
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
 
-/* HERO */
-.hero{
-  display:grid;
-  grid-template-columns:1fr 420px;
-  gap:28px;
-  margin-bottom:28px;
-}
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding: 28px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.03);
+      box-shadow: var(--shadow-soft);
+    }
 
-.hero-card{
-  background:var(--glass);
-  padding:28px;
-  border-radius:var(--radius);
-  border:1px solid rgba(255,255,255,0.03);
-  box-shadow:0 8px 30px rgba(3,8,22,0.6);
-}
+    h1 { font-size: 28px; margin: 0 0 10px; }
+    h2 { font-size: 22px; margin: 0 0 8px; }
+    h3 { font-size: 18px; margin: 0 0 6px; }
 
-.tag{ color:var(--accent); font-weight:700; margin-bottom:12px }
+    .tag {
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 12px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
 
-h1{ font-size:28px; margin:0 0 10px }
+    p.lead { color: var(--muted); margin-bottom: 18px; }
 
-p.lead{ color:var(--muted); margin:6px 0 18px }
+    .btn {
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.04);
+      color: inherit;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
 
-/* BUTTONS */
-.cta{ display:flex; gap:12px; margin-top:18px }
-.btn{
-  padding:10px 14px;
-  border-radius:10px;
-  font-weight:700;
-  font-size:14px;
-  text-decoration:none;
-  color:inherit;
-  background:var(--glass);
-  border:1px solid rgba(255,255,255,0.04);
-  transition:0.15s;
-}
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 30px rgba(23,162,255,0.08);
-}
-.btn.primary{
-  background:linear-gradient(90deg,var(--accent),#00ffc9);
-  color:#041025;
-  border:none;
-}
+    .btn.primary {
+      background: linear-gradient(90deg, var(--accent), #00ffc9);
+      color: #041025;
+      border: 0;
+    }
 
-/* ASIDE */
-.right-profile{
-  padding:10px;
-  border-radius:var(--radius);
-  background:var(--glass);
-  border:1px solid rgba(255,255,255,0.03);
-  box-shadow:0 6px 18px rgba(3,8,22,0.6);
-}
+    .snapshot {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
 
-.right-profile img{
-  width:100%;
-  height:220px;
-  border-radius:10px;
-  object-fit:cover;
-}
+    .stat {
+      background: var(--glass);
+      padding: 12px;
+      border-radius: 10px;
+      min-width: 92px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
 
-/* PROJECTS */
-.section{ margin-top:40px }
-.section h2{ margin:0 0 12px }
+    .right-profile {
+      height: 680px;
+      padding: 10px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.03);
+      box-shadow: var(--shadow-soft);
+    }
 
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-  gap:16px;
-}
+    .right-profile img {
+      width: 100%;
+      height: 386px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
 
-.project{
-  background:var(--card);
-  padding:16px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,0.02);
-  transition:0.2s;
-}
-.project:hover{
-  transform:translateY(-6px);
-  box-shadow:0 14px 40px rgba(2,6,18,0.6);
-}
+    .skills-section,
+    .tools-section {
+      padding: 60px 20px;
+      max-width: 1300px;
+      margin: auto;
+    }
 
-.project .meta{
-  color:var(--muted);
-  font-size:13px;
-}
+    .skills-matrix {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+    }
 
-.project .tags{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
+    .skills-column h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: #4da3ff;
+    }
 
-.tag-pill{
-  padding:6px 8px;
-  border-radius:8px;
-  font-size:12px;
-  background:rgba(255,255,255,0.03);
-  color:var(--muted);
-}
+    .skills-column ul { list-style: none; padding: 0; }
+    .skills-column li { margin-bottom: 8px; padding-left: 14px; position: relative; }
+    .skills-column li::before { content: "•"; position: absolute; left: 0; color: #4da3ff; }
 
-/* CONTACT */
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 320px;
-  gap:16px;
-}
-.contact-card{
-  background:var(--card);
-  padding:16px;
-  border-radius:12px;
-}
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
 
-/* FOOTER */
-footer{
-  margin-top:32px;
-  font-size:13px;
-  color:var(--muted);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    .tool-item {
+      background: var(--card);
+      padding: 14px 18px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+      color: var(--muted);
+      position: relative;
+      transition: transform .15s ease;
+    }
 
-a.social{
-  color:var(--muted);
-  margin-left:12px;
-  text-decoration:none;
-}
+    .tool-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-soft);
+    }
 
-/* RESPONSIVE */
-@media (max-width:980px){
-  .hero{ grid-template-columns:1fr }
-}
-@media (max-width:640px){
-  body{ padding:18px }
-  nav a{ display:none }
-  .projects-grid{ grid-template-columns:1fr }
-}
-</style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .project {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.02);
+      cursor: pointer;
+      transition: transform .12s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-soft);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(1,2,6,0.85);
+      z-index: 999;
+      padding: 28px;
+    }
+
+    .modal.open { display: flex; }
+
+    .modal-card {
+      width: 100%;
+      max-width: 920px;
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+      max-height: 86vh;
+      overflow: auto;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: none;
+      border: 0;
+      color: var(--muted);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    /* Light theme */
+    body.light-theme {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --muted: #333b47;
+      --accent: #007bff;
+      --glass: rgba(0,0,0,0.05);
+      color: #0b1220;
+      background: linear-gradient(180deg, #f7f9fc 0%, #eaeef5 100%);
+    }
+
+    body.light-theme .btn { background: rgba(0,0,0,0.05); color: #0b1220; }
+    body.light-theme .btn.primary { color: white; }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 18px; }
+      nav { display: none; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
@@ -242,73 +312,127 @@ a.social{
 
 <header>
   <a class="brand" href="#">
-    <div class="logo"><!-- Insert logo image -->
-      <img src="your-logo.png" alt="Logo">
+    <div class="logo">
+      <img src="https://via.placeholder.com/300" alt="Logo">
     </div>
     <div>
       <div style="font-weight:800">Your Name</div>
-      <div style="font-size:12px;color:var(--muted)">Your Job Title</div>
+      <div style="font-size:12px;color:var(--muted)">Your Professional Title</div>
     </div>
   </a>
 
   <nav>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <button id="themeToggle" class="btn" style="font-size:13px;">🌙 Toggle Theme</button>
+  <button id="themeToggle" class="btn">🌙 Toggle Theme</button>
 </header>
-
 
 <main>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-card">
-    <div class="tag">Your Tagline</div>
+    <div class="tag">Professional • Portfolio • Showcase</div>
+    <h1>Building meaningful solutions through clarity, structure, and thoughtful execution.</h1>
+    <p class="lead">This portfolio highlights selected work across reporting, analysis, process improvement, and digital solutions.</p>
 
-    <h1>Hi, I'm <span style="color:var(--accent)">Your Name</span>.</h1>
-    <p class="lead">Short intro text goes here.</p>
-    <p class="lead">Add another line here if needed.</p>
-
-    <div class="cta">
-      <a class="btn primary" href="#projects">See Projects</a>
-      <a class="btn" href="#">Contact</a>
-      <a class="btn" href="#" download>Download CV</a>
+    <div class="snapshot">
+      <div class="stat"><strong>10+</strong> Projects</div>
+      <div class="stat"><strong>5+</strong> Case Studies</div>
+      <div class="stat"><strong>3</strong> Focus Areas</div>
     </div>
   </div>
 
   <aside class="right-profile">
-    <img src="your-photo.jpg" alt="Profile photo">
+    <img src="https://via.placeholder.com/600x400" alt="Profile Image">
+    <div style="margin-top:12px">
+      <div style="font-weight:700">Professional Summary</div>
+      <p style="color:var(--muted);font-size:14px;margin-top:6px">
+        A results‑driven professional with experience supporting business operations, reporting, and solution development.
+      </p>
+    </div>
   </aside>
 </section>
 
-
 <!-- PROJECTS -->
 <section id="projects" class="section">
-  <h2>Projects & Case Studies</h2>
+  <h2>Projects</h2>
 
   <div class="projects-grid">
 
-    <!-- PROJECT TEMPLATE (duplicate as needed) -->
     <article class="project" data-case="project-1">
-      <div class="meta">Skills • Tools • Tags</div>
-      <h3>Project Title</h3>
-      <p>Short description of the project.</p>
+      <div class="meta">Reporting • Analysis • Automation</div>
+      <h3>Operational Insights Dashboard</h3>
+      <p>A structured reporting solution designed to surface key operational metrics for leadership review.</p>
       <div class="tags">
-        <span class="tag-pill">Tag</span>
-        <span class="tag-pill">Tag</span>
-      </div>
-      <div class="more" style="margin-top:10px">
-        <button class="btn view-btn" data-open="project-1">View Case</button>
+        <span class="tag-pill">Analytics</span>
+        <span class="tag-pill">Dashboards</span>
+        <span class="tag-pill">Data</span>
       </div>
     </article>
 
-    <!-- Duplicate project cards -->
+    <article class="project" data-case="project-2">
+      <div class="meta">Documentation • Process • Governance</div>
+      <h3>Process Standardization Framework</h3>
+      <p>A documentation initiative to unify workflows and improve cross‑team consistency.</p>
+      <div class="tags">
+        <span class="tag-pill">Documentation</span>
+        <span class="tag-pill">Governance</span>
+        <span class="tag-pill">Quality</span>
+      </div>
+    </article>
 
   </div>
 </section>
 
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+  <h2>Skills</h2>
+
+  <div class="skills-matrix">
+    <div class="skills-column">
+      <h3>Analysis & Reporting</h3>
+      <ul>
+        <li>Data interpretation</li>
+        <li>Dashboard creation</li>
+        <li>Trend analysis</li>
+      </ul>
+    </div>
+
+    <div class="skills-column">
+      <h3>Process & Operations</h3>
+      <ul>
+        <li>Workflow documentation</li>
+        <li>Process mapping</li>
+        <li>Quality review</li>
+      </ul>
+    </div>
+
+    <div class="skills-column">
+      <h3>Tools & Platforms</h3>
+      <ul>
+        <li>Spreadsheet tools</li>
+        <li>Reporting platforms</li>
+        <li>Collaboration systems</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section">
+  <h2>Tools</h2>
+
+  <div class="tools-grid">
+    <div class="tool-item">Analytics Tools</div>
+    <div class="tool-item">Documentation Suites</div>
+    <div class="tool-item">Workflow Platforms</div>
+    <div class="tool-item">Collaboration Tools</div>
+  </div>
+</section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
@@ -316,29 +440,33 @@ a.social{
 
   <div class="contact-grid">
     <div class="contact-card">
-      <p style="color:var(--muted)">Optional intro text for contact.</p>
+      <p style="color:var(--muted)">Use the form below to send a message.</p>
 
       <form id="contactForm" onsubmit="submitContact(event)">
-        <label>Your Name</label>
+        <label>Your name</label>
         <input required name="name">
 
-        <label style="margin-top:10px">Email</label>
+        <label style="margin-top:8px;display:block">Email</label>
         <input required type="email" name="email">
 
-        <label style="margin-top:10px">Message</label>
-        <textarea required rows="4" name="message"></textarea>
+        <label style="margin-top:8px;display:block">Message</label>
+        <textarea required name="message" rows="4"></textarea>
 
-        <div style="margin-top:12px; display:flex; gap:10px">
-          <button class="btn primary">Send Message</button>
+        <div style="margin-top:12px;display:flex;gap:10px">
+          <button class="btn primary" type="submit">Send message</button>
         </div>
+
+        <div id="formMsg" style="margin-top:10px;color:var(--muted);font-size:13px"></div>
       </form>
     </div>
 
     <aside class="contact-card">
-      <div><strong>Reach me</strong></div>
-      <div style="color:var(--muted);margin-top:8px">Email: <a href="#" style="color:var(--accent)">your@email.com</a></div>
-      <div style="color:var(--muted);margin-top:8px">LinkedIn: <a href="#" style="color:var(--accent)">Profile</a></div>
-      <div style="color:var(--muted);margin-top:8px">GitHub: <a href="#" style="color:var(--accent)">GitHub</a></div>
+      <div style="font-weight:700">Reach me</div>
+      <div style="color:var(--muted);margin-top:8px">Email: <span style="color:var(--accent)">your@email
+
+</span></div>
+      <div style="color:var(--muted);margin-top:8px">LinkedIn: <span style="color:var(--accent)">your-profile</span></div>
+      <div style="color:var(--muted);margin-top:8px">Website: <span style="color:var(--accent)">your-site</span></div>
     </aside>
   </div>
 </section>
@@ -346,57 +474,143 @@ a.social{
 </main>
 
 <footer>
-  <div>© <span id="year"></span> Your Name</div>
-  <div>Made with HTML • Hosted anywhere</div>
-  <div>
-    <a class="social" href="#">GitHub</a>
-    <a class="social" href="#">LinkedIn</a>
-  </div>
+  <div>© <span id="year"></span> Your Portfolio</div>
 </footer>
 
 </div>
 
 <!-- MODAL -->
-<div id="modal" class="modal" style="display:none">
+<div id="modal" class="modal">
   <div class="modal-card">
-    <button class="close" onclick="closeModal()">✕</button>
+    <button class="close" onclick="closeModal()">Close ✕</button>
     <div id="modalContent"></div>
   </div>
 </div>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-/* CASE STUDY CONTENT — EMPTY TEMPLATE */
-const cases = {
-  "project-1": {
-    title: "Project Title",
-    subtitle: "Subtitle",
-    body: `<p>Write detailed project content here.</p>`
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-theme');
+    themeToggle.textContent = '🌞 Dark Mode';
   }
-};
 
-/* OPEN MODAL */
-document.querySelectorAll("[data-open]").forEach(b=>{
-  b.onclick = ()=>openCase(b.dataset.open);
-});
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+    const isLight = body.classList.contains('light-theme');
+    themeToggle.textContent = isLight ? '🌞 Dark Mode' : '🌙 Light Mode';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
 
-function openCase(id){
-  const data = cases[id];
-  const content = `
-    <h2>${data.title}</h2>
-    <p><em>${data.subtitle}</em></p>
-    ${data.body}
-  `;
-  document.getElementById("modalContent").innerHTML = content;
-  document.getElementById("modal").style.display = "flex";
-}
+  const cases = {
+    "project-1": {
+      title: "Operational Insights Dashboard",
+      subtitle: "Reporting • Analysis • Automation",
+      body: `
+        <p><strong>Summary</strong></p>
+        <p>A structured dashboard designed to provide leadership with clear visibility into operational performance.</p>
 
-/* CLOSE MODAL */
-function closeModal(){
-  document.getElementById("modal").style.display = "none";
-}
+        <h4>Objectives</h4>
+        <ul>
+          <li>Centralize key performance indicators.</li>
+          <li>Improve reporting consistency.</li>
+          <li>Enable data‑driven decision making.</li>
+        </ul>
+
+        <h4>Outcome</h4>
+        <p>The dashboard improved visibility, reduced manual reporting time, and supported more informed planning discussions.</p>
+      `
+    },
+
+    "project-2": {
+      title: "Process Standardization Framework",
+      subtitle: "Documentation • Process • Governance",
+      body: `
+        <p><strong>Summary</strong></p>
+        <p>
+          A structured initiative focused on improving consistency across recurring workflows by developing clear,
+          accessible documentation and standardized procedures.
+        </p>
+
+        <h4>Objectives</h4>
+        <ul>
+          <li>Reduce ambiguity in cross‑team processes.</li>
+          <li>Create a unified reference library for recurring tasks.</li>
+          <li>Improve onboarding and knowledge transfer.</li>
+        </ul>
+
+        <h4>Outcome</h4>
+        <p>
+          The framework improved operational clarity, reduced repeated questions, and supported more predictable
+          collaboration between teams.
+        </p>
+      `
+    }
+  };
+
+  const modal = document.getElementById('modal');
+  const modalContent = document.getElementById('modalContent');
+  let lastFocusedElement = null;
+
+  function openProjectPopup(projectId) {
+    const data = cases[projectId];
+    if (!data) return;
+
+    lastFocusedElement = document.activeElement;
+
+    modalContent.innerHTML = `
+      <h3>${data.title}</h3>
+      <div class="modal-subtitle">${data.subtitle}</div>
+      ${data.body}
+    `;
+
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+
+    const closeBtn = modal.querySelector('.close');
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+    }
+  }
+
+  // Attach click handlers to project cards
+  document.querySelectorAll('.project').forEach(proj => {
+    const id = proj.getAttribute('data-case');
+    if (id) {
+      proj.addEventListener('click', e => {
+        if (e.target.closest('button,a')) return;
+        openProjectPopup(id);
+      });
+    }
+  });
+
+  // Close modal on background click
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Close modal on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+
+  // Contact form handler
+  function submitContact(event) {
+    event.preventDefault();
+    const formMsg = document.getElementById('formMsg');
+    formMsg.textContent = "Your message has been submitted.";
+  }
 </script>
-
 </body>
 </html>
