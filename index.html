@@ -576,6 +576,98 @@
         align-items: flex-start;
       }
     }
+	
+	.skills-section {
+    padding: 60px 20px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+}
+
+.skills-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+.skills-column h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #4da3ff;
+}
+
+.skills-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-column ul li {
+    margin-bottom: 8px;
+    padding-left: 14px;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.skills-column ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4da3ff;
+}
+
+.tools-section {
+    padding: 60px 20px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tool-item {
+    background: var(--card);
+    color: var(--muted);
+    padding: 14px 18px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-subtle);
+    position: relative;
+    overflow: hidden;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+/* Radial highlight like project cards */
+.tool-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(23,162,255,0.18), transparent 55%);
+    opacity: 0;
+    transition: opacity .15s ease;
+    pointer-events: none;
+}
+
+.tool-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(2,6,18,0.55);
+    border-color: var(--accent-soft);
+}
+
+.tool-item:hover::before {
+    opacity: 1;
+}
+
   </style>
 </head>
 
@@ -891,39 +983,256 @@
 </div>
 
 
+<!-- Tool Grid -->
+<section id="Tools" class="section" aria-labelledby="projects-title">
+<h2>Tools & Technologies</h2> 
+    <div class="tools-grid">
+        <div class="tool-item">Microsoft Sentinel</div>
+        <div class="tool-item">Microsoft Defender</div>
+        <div class="tool-item">Cisco Umbrella</div>
+        <div class="tool-item">Mimecast</div>
+        <div class="tool-item">Nessus</div>
+        <div class="tool-item">Ivanti Neurons</div>
+        <div class="tool-item">Patch My PC</div>
+        <div class="tool-item">AnyRun</div>
+        <div class="tool-item">Wireshark</div>
+        <div class="tool-item">Azure AD / Entra ID</div>
+        <div class="tool-item">Intune</div>
+        <div class="tool-item">AD Manager</div>
+        <div class="tool-item">KeePass</div>
+        <div class="tool-item">Barracuda WAF</div>
+        <div class="tool-item">Arctic Wolf</div>
+        <div class="tool-item">1Password</div>
+        <div class="tool-item">Graph API</div>
+        <div class="tool-item">CyberChef</div>
+        <div class="tool-item">MX Toolbox</div>
+        <div class="tool-item">DNSDumpster</div>
+        <div class="tool-item">KnowBe4</div>
+        <div class="tool-item">TeamViewer</div>
+        <div class="tool-item">PowerShell</div>
+        <div class="tool-item">Kali Linux</div>
+
+    </div>
+</section>
+
 <!-- CERTIFICATIONS -->
-<section id="certifications" class="section">
-<h2>Certifications & Skills</h2>
-<hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:18px 0">
-<div class="certs">
-<div class="cert">Certification - Microsoft SC-900</div>
-<div class="cert">Microsoft Admin Suite</div>
-<div class="cert">Microsoft Security Suite</div>
-<div class="cert">Cisco Umbrella</div>
-<div class="cert">Cisco Talos</div>
-<div class="cert">ADAudit +</div>
-<div class="cert">Pentanar Risk Management</div>
-<div class="cert">4Risk Management</div>
-<div class="cert">Risk Management</div>
-<div class="cert">Vulnerability Management</div>
-<div class="cert">Patch Management</div>
-<div class="cert">Nessus Scanning</div>
-<div class="cert">AWS (Basic)</div>
-<div class="cert">UpGuard (Basic)</div>
-<div class="cert">Datadog (Basic)</div>
-<div class="cert">Samsung Knox (Basic)</div>
-<div class="cert">PowerShell</div>
-<div class="cert">KQL</div>
-<div class="cert">Level 1 Service Desk</div>
-<div class="cert">Level 2 Service Desk</div>
-<div class="cert">Outlook</div>
-<div class="cert">Teams</div>
-<div class="cert">CyberChef</div>
-<div class="cert">MX tool box</div>
-<div class="cert">Any Run</div>
-<div class="cert">DNS Dumpster</div>
-<div class="cert">Arctic Wolf</div>
-</div>
+<section id="Skills" class="section" aria-labelledby="projects-title">
+<h2>Skills Matrix</h2> 
+    <div class="skills-matrix">
+        <!-- Cybersecurity Operations -->
+        <div class="skills-column">
+            <h3>Cybersecurity Operations</h3>
+            <ul>
+                <li>SOC Operations & SIEM Monitoring</li>
+                <li>Incident Response & Threat Investigation</li>
+                <li>Sentinel Rule Review & Optimisation</li>
+                <li>IOC Management (IPs, Domains, Hashes)</li>
+                <li>Event ID Investigation</li>
+                <li>WAF Log Analysis</li>
+                <li>Identity Theft & Pass‑the‑Ticket Investigation</li>
+                <li>Security Alert Routing & Mailbox Management</li>
+                <li>Security Operations Documentation</li>
+                <li>Security Management & Corporate Security</li>
+            </ul>
+        </div>
+
+        <!-- SIEM / KQL / Log Analysis -->
+        <div class="skills-column">
+            <h3>SIEM, KQL & Log Analysis</h3>
+            <ul>
+                <li>KQL Query Development</li>
+                <li>Vulnerability Reporting Automation</li>
+                <li>Device Isolation Checks</li>
+                <li>AVD/WVD Log Analysis</li>
+                <li>CVE Extraction & Reporting</li>
+                <li>Duplicate Device Detection</li>
+                <li>Defender Email Routing Queries</li>
+                <li>Sensor Health State Analysis</li>
+                <li>KQL Dashboards & Reporting</li>
+                <li>Log Troubleshooting & Optimisation</li>
+            </ul>
+        </div>
+
+        <!-- Endpoint Security -->
+        <div class="skills-column">
+            <h3>Endpoint Security & Defender</h3>
+            <ul>
+                <li>Device Isolation & Remediation</li>
+                <li>Antivirus & Full System Scans</li>
+                <li>Defender Exclusions Management</li>
+                <li>ASR Rule Creation & Testing</li>
+                <li>Defender for Identity Sensors</li>
+                <li>Cloud App Permissions</li>
+                <li>Risky Sign‑In Investigation</li>
+                <li>IOC Importing & Threat Blocking</li>
+                <li>Suspicious File Analysis (AnyRun)</li>
+            </ul>
+        </div>
+
+        <!-- Cisco Umbrella -->
+        <div class="skills-column">
+            <h3>Cisco Umbrella & Network Security</h3>
+            <ul>
+                <li>Domain, URL & IP Blocking</li>
+                <li>Umbrella Policy Management</li>
+                <li>Decryption Exceptions</li>
+                <li>Proxy & Routing Troubleshooting</li>
+                <li>Whitelist & Sender Management</li>
+                <li>WAF Log Review</li>
+                <li>AI Access Control</li>
+            </ul>
+        </div>
+
+        <!-- Mimecast -->
+        <div class="skills-column">
+            <h3>Mimecast Email Security</h3>
+            <ul>
+                <li>Allow/Block List Management</li>
+                <li>DKIM, DMARC & SPF Troubleshooting</li>
+                <li>Policy Creation & Modification</li>
+                <li>Held/Bounced Email Investigation</li>
+                <li>Message Tracking & Log Review</li>
+                <li>Mimecast PRs & Change Requests</li>
+                <li>Supporting Comms, Legal & HR</li>
+            </ul>
+        </div>
+
+        <!-- Vulnerability Management -->
+        <div class="skills-column">
+            <h3>Vulnerability Management</h3>
+            <ul>
+                <li>Nessus Scanning (Manual & Scheduled)</li>
+                <li>Vulnerability Data Analysis</li>
+                <li>Monthly Vulnerability Reporting</li>
+                <li>Patch Management Collaboration</li>
+                <li>CVE Investigation (Zero Days)</li>
+                <li>Defender Device Tagging</li>
+                <li>Patch My PC (PMP)</li>
+                <li>Windows, MacOS & Server Vulnerabilities</li>
+                <li>Vulnerability SOP Creation</li>
+            </ul>
+        </div>
+
+        <!-- Identity & Access -->
+        <div class="skills-column">
+            <h3>Identity & Access Management</h3>
+            <ul>
+                <li>Password Resets & Account Recovery</li>
+                <li>Admin Permission Management</li>
+                <li>Entra ID Sign‑In Investigation</li>
+                <li>MFA Troubleshooting</li>
+                <li>Keepass Account Management</li>
+                <li>AD Group & Domain Admin Review</li>
+                <li>User Onboarding & Offboarding</li>
+                <li>AVD Access Review</li>
+            </ul>
+        </div>
+
+        <!-- Cloud & Infrastructure -->
+        <div class="skills-column">
+            <h3>Cloud & Infrastructure</h3>
+            <ul>
+                <li>Azure AD / Entra ID</li>
+                <li>Intune Policy Creation (ASR, BYOD)</li>
+                <li>Intune Sync Troubleshooting</li>
+                <li>ADFS, DHCP, SolarWinds</li>
+                <li>Encryption Key Exporting</li>
+                <li>Server Patching Review</li>
+                <li>Azure Monitor Agent (AMA)</li>
+                <li>MMA Migration</li>
+                <li>AVD/WVD Log Review</li>
+            </ul>
+        </div>
+
+        <!-- Incident Response -->
+        <div class="skills-column">
+            <h3>Incident Response & Investigation</h3>
+            <ul>
+                <li>Malware Analysis (Gootloader, Wacatac, etc.)</li>
+                <li>AnyRun Behavioural Analysis</li>
+                <li>URL, IP & Hash Blocking</li>
+                <li>Incident Timeline Creation</li>
+                <li>Device Isolation & Rebuild Coordination</li>
+                <li>Microsoft Critical Situation Handling</li>
+                <li>Malware Response Process Creation</li>
+                <li>Cross‑Team Incident Leadership</li>
+            </ul>
+        </div>
+
+        <!-- Phishing & Forensics -->
+        <div class="skills-column">
+            <h3>Phishing & Forensics</h3>
+            <ul>
+                <li>Phishing Investigation</li>
+                <li>Attachment & URL Analysis</li>
+                <li>Spoofing Detection</li>
+                <li>User Awareness Support</li>
+                <li>Evidence Collection</li>
+                <li>Cyber Attack Folder Creation</li>
+                <li>Forensic Reporting</li>
+            </ul>
+        </div>
+
+        <!-- IT Operations -->
+        <div class="skills-column">
+            <h3>IT Operations & Support</h3>
+            <ul>
+                <li>1st & 2nd Line Support</li>
+                <li>MSP Experience</li>
+                <li>Office 365 Support</li>
+                <li>Outlook, MFA & Device Troubleshooting</li>
+                <li>Hardware & Software Support</li>
+                <li>Printer Support</li>
+                <li>TeamViewer Support</li>
+                <li>On‑Call Support</li>
+                <li>SLA Management</li>
+            </ul>
+        </div>
+
+        <!-- Governance -->
+        <div class="skills-column">
+            <h3>Governance, Risk & Compliance</h3>
+            <ul>
+                <li>Policy Review & Creation</li>
+                <li>Incident Management SOPs</li>
+                <li>BYOD & Email Security Policies</li>
+                <li>Risk Management Documentation</li>
+                <li>CRQ Creation & Implementation</li>
+                <li>ISO Audit Preparation</li>
+                <li>Risk Champion Support</li>
+                <li>Device Tagging for Risk Reporting</li>
+            </ul>
+        </div>
+
+        <!-- Automation -->
+        <div class="skills-column">
+            <h3>Automation, Scripting & Tools</h3>
+            <ul>
+                <li>KQL Automation</li>
+                <li>PowerShell Scripting</li>
+                <li>dsregcmd /status Troubleshooting</li>
+                <li>Teams Workflow Automation</li>
+                <li>Automated Reporting Processes</li>
+            </ul>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-column">
+            <h3>Soft Skills & Professional Strengths</h3>
+            <ul>
+                <li>Cross‑Department Communication</li>
+                <li>Stakeholder Management</li>
+                <li>Mentoring & Knowledge Sharing</li>
+                <li>Audit Presentation</li>
+                <li>Documentation & Reporting</li>
+                <li>Time Management</li>
+                <li>Problem Solving</li>
+                <li>Root‑Cause Analysis</li>
+                <li>Multi‑Team Coordination</li>
+            </ul>
+        </div>
+
+    </div>
 </section>
 
 <!-- CONTACT -->
