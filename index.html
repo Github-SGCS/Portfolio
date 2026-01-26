@@ -1017,226 +1017,99 @@
     </div>
 </section>
 
-<!-- skills -->
-<section id="skills" class="section" aria-labelledby="projects-title">
-<h2>Skills Matrix</h2> 
-    <div class="skills-matrix">
+    <!-- SKILLS MATRIX -->
+    <section id="skills" class="skills-section section" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title">Skills Matrix</h2>
+      <div class="skills-matrix">
         <!-- Cybersecurity Operations -->
         <div class="skills-column">
-            <h3>Cybersecurity Operations</h3>
-            <ul>
-                <li>SOC Operations & SIEM Monitoring</li>
-                <li>Incident Response & Threat Investigation</li>
-                <li>Sentinel Rule Review & Optimisation</li>
-                <li>IOC Management (IPs, Domains, Hashes)</li>
-                <li>Event ID Investigation</li>
-                <li>WAF Log Analysis</li>
-                <li>Identity Theft & Pass‑the‑Ticket Investigation</li>
-                <li>Security Alert Routing & Mailbox Management</li>
-                <li>Security Operations Documentation</li>
-                <li>Security Management & Corporate Security</li>
-            </ul>
+          <h3>Threat Detection & Response</h3>
+          <ul>
+            <li>SOC operations & SIEM monitoring</li>
+            <li>Alert triage & escalation</li>
+            <li>Incident response lifecycle</li>
+            <li>Threat investigation & IOC analysis</li>
+            <li>MITRE ATT&CK mapping</li>
+            <li>Log correlation & event analysis</li>
+            <li>False‑positive reduction & tuning</li>
+            <li>Security operations documentation</li>
+          </ul>
         </div>
 
-        <!-- SIEM / KQL / Log Analysis -->
+        <!-- Detection Engineering -->
         <div class="skills-column">
-            <h3>SIEM, KQL & Log Analysis</h3>
-            <ul>
-                <li>KQL Query Development</li>
-                <li>Vulnerability Reporting Automation</li>
-                <li>Device Isolation Checks</li>
-                <li>AVD/WVD Log Analysis</li>
-                <li>CVE Extraction & Reporting</li>
-                <li>Duplicate Device Detection</li>
-                <li>Defender Email Routing Queries</li>
-                <li>Sensor Health State Analysis</li>
-                <li>KQL Dashboards & Reporting</li>
-                <li>Log Troubleshooting & Optimisation</li>
-            </ul>
+          <h3>Detection Engineering & KQL</h3>
+          <ul>
+            <li>KQL query development & optimisation</li>
+            <li>Custom detection rules in Sentinel</li>
+            <li>Vulnerability reporting automation</li>
+            <li>Device isolation & health checks</li>
+            <li>Sensor health state analysis</li>
+            <li>AVD/WVD log analysis</li>
+            <li>Defender email routing queries</li>
+            <li>Dashboards & reporting for stakeholders</li>
+          </ul>
         </div>
 
         <!-- Endpoint Security -->
         <div class="skills-column">
-            <h3>Endpoint Security & Defender</h3>
-            <ul>
-                <li>Device Isolation & Remediation</li>
-                <li>Antivirus & Full System Scans</li>
-                <li>Defender Exclusions Management</li>
-                <li>ASR Rule Creation & Testing</li>
-                <li>Defender for Identity Sensors</li>
-                <li>Cloud App Permissions</li>
-                <li>Risky Sign‑In Investigation</li>
-                <li>IOC Importing & Threat Blocking</li>
-                <li>Suspicious File Analysis (AnyRun)</li>
-            </ul>
+          <h3>Endpoint Security & Defender</h3>
+          <ul>
+            <li>Defender for Endpoint configuration</li>
+            <li>Device isolation & remediation workflows</li>
+            <li>Antivirus & full system scans</li>
+            <li>ASR rule creation & testing</li>
+            <li>Defender for Identity sensors</li>
+            <li>Suspicious file analysis (AnyRun)</li>
+            <li>Threat blocking & IOC importing</li>
+            <li>Exclusions management & tuning</li>
+          </ul>
         </div>
 
-        <!-- Cisco Umbrella -->
+        <!-- Cloud & Identity -->
         <div class="skills-column">
-            <h3>Cisco Umbrella & Network Security</h3>
-            <ul>
-                <li>Domain, URL & IP Blocking</li>
-                <li>Umbrella Policy Management</li>
-                <li>Decryption Exceptions</li>
-                <li>Proxy & Routing Troubleshooting</li>
-                <li>Whitelist & Sender Management</li>
-                <li>WAF Log Review</li>
-                <li>AI Access Control</li>
-            </ul>
+          <h3>Cloud & Identity Security</h3>
+          <ul>
+            <li>Entra ID / Azure AD administration</li>
+            <li>Conditional Access & MFA troubleshooting</li>
+            <li>Risky sign‑in investigation</li>
+            <li>Cloud app permissions review</li>
+            <li>Identity theft & pass‑the‑ticket investigation</li>
+            <li>Access reviews & least‑privilege thinking</li>
+          </ul>
         </div>
 
-        <!-- Mimecast -->
+        <!-- Network & Email Security -->
         <div class="skills-column">
-            <h3>Mimecast Email Security</h3>
-            <ul>
-                <li>Allow/Block List Management</li>
-                <li>DKIM, DMARC & SPF Troubleshooting</li>
-                <li>Policy Creation & Modification</li>
-                <li>Held/Bounced Email Investigation</li>
-                <li>Message Tracking & Log Review</li>
-                <li>Mimecast PRs & Change Requests</li>
-                <li>Supporting Comms, Legal & HR</li>
-            </ul>
+          <h3>Network & Email Security</h3>
+          <ul>
+            <li>Cisco Umbrella policy management</li>
+            <li>Domain, URL & IP blocking</li>
+            <li>Decryption exceptions & routing troubleshooting</li>
+            <li>Mimecast policy creation & modification</li>
+            <li>DKIM, DMARC & SPF troubleshooting</li>
+            <li>Held/bounced email investigation</li>
+            <li>WAF log review & analysis</li>
+          </ul>
         </div>
 
-        <!-- Vulnerability Management -->
+        <!-- Governance & Automation -->
         <div class="skills-column">
-            <h3>Vulnerability Management</h3>
-            <ul>
-                <li>Nessus Scanning (Manual & Scheduled)</li>
-                <li>Vulnerability Data Analysis</li>
-                <li>Monthly Vulnerability Reporting</li>
-                <li>Patch Management Collaboration</li>
-                <li>CVE Investigation (Zero Days)</li>
-                <li>Defender Device Tagging</li>
-                <li>Patch My PC (PMP)</li>
-                <li>Windows, MacOS & Server Vulnerabilities</li>
-                <li>Vulnerability SOP Creation</li>
-            </ul>
+          <h3>Governance, Risk & Automation</h3>
+          <ul>
+            <li>Policy creation & review</li>
+            <li>Risk registers & appetite statements</li>
+            <li>Cyber Essentials alignment</li>
+            <li>SOP creation & knowledge base building</li>
+            <li>Audit preparation & evidence gathering</li>
+            <li>PowerShell scripting for workflows</li>
+            <li>KQL‑driven reporting automation</li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <!-- Identity & Access -->
-        <div class="skills-column">
-            <h3>Identity & Access Management</h3>
-            <ul>
-                <li>Password Resets & Account Recovery</li>
-                <li>Admin Permission Management</li>
-                <li>Entra ID Sign‑In Investigation</li>
-                <li>MFA Troubleshooting</li>
-                <li>Keepass Account Management</li>
-                <li>AD Group & Domain Admin Review</li>
-                <li>User Onboarding & Offboarding</li>
-                <li>AVD Access Review</li>
-            </ul>
-        </div>
-
-        <!-- Cloud & Infrastructure -->
-        <div class="skills-column">
-            <h3>Cloud & Infrastructure</h3>
-            <ul>
-                <li>Azure AD / Entra ID</li>
-                <li>Intune Policy Creation (ASR, BYOD)</li>
-                <li>Intune Sync Troubleshooting</li>
-                <li>ADFS, DHCP, SolarWinds</li>
-                <li>Encryption Key Exporting</li>
-                <li>Server Patching Review</li>
-                <li>Azure Monitor Agent (AMA)</li>
-                <li>MMA Migration</li>
-                <li>AVD/WVD Log Review</li>
-            </ul>
-        </div>
-
-        <!-- Incident Response -->
-        <div class="skills-column">
-            <h3>Incident Response & Investigation</h3>
-            <ul>
-                <li>Malware Analysis (Gootloader, Wacatac, etc.)</li>
-                <li>AnyRun Behavioural Analysis</li>
-                <li>URL, IP & Hash Blocking</li>
-                <li>Incident Timeline Creation</li>
-                <li>Device Isolation & Rebuild Coordination</li>
-                <li>Microsoft Critical Situation Handling</li>
-                <li>Malware Response Process Creation</li>
-                <li>Cross‑Team Incident Leadership</li>
-            </ul>
-        </div>
-
-        <!-- Phishing & Forensics -->
-        <div class="skills-column">
-            <h3>Phishing & Forensics</h3>
-            <ul>
-                <li>Phishing Investigation</li>
-                <li>Attachment & URL Analysis</li>
-                <li>Spoofing Detection</li>
-                <li>User Awareness Support</li>
-                <li>Evidence Collection</li>
-                <li>Cyber Attack Folder Creation</li>
-                <li>Forensic Reporting</li>
-            </ul>
-        </div>
-
-        <!-- IT Operations -->
-        <div class="skills-column">
-            <h3>IT Operations & Support</h3>
-            <ul>
-                <li>1st & 2nd Line Support</li>
-                <li>MSP Experience</li>
-                <li>Office 365 Support</li>
-                <li>Outlook, MFA & Device Troubleshooting</li>
-                <li>Hardware & Software Support</li>
-                <li>Printer Support</li>
-                <li>TeamViewer Support</li>
-                <li>On‑Call Support</li>
-                <li>SLA Management</li>
-            </ul>
-        </div>
-
-        <!-- Governance -->
-        <div class="skills-column">
-            <h3>Governance, Risk & Compliance</h3>
-            <ul>
-                <li>Policy Review & Creation</li>
-                <li>Incident Management SOPs</li>
-                <li>BYOD & Email Security Policies</li>
-                <li>Risk Management Documentation</li>
-                <li>CRQ Creation & Implementation</li>
-                <li>ISO Audit Preparation</li>
-                <li>Risk Champion Support</li>
-                <li>Device Tagging for Risk Reporting</li>
-            </ul>
-        </div>
-
-        <!-- Automation -->
-        <div class="skills-column">
-            <h3>Automation, Scripting & Tools</h3>
-            <ul>
-                <li>KQL Automation</li>
-                <li>PowerShell Scripting</li>
-                <li>dsregcmd /status Troubleshooting</li>
-                <li>Teams Workflow Automation</li>
-                <li>Automated Reporting Processes</li>
-            </ul>
-        </div>
-
-        <!-- Soft Skills -->
-        <div class="skills-column">
-            <h3>Soft Skills & Professional Strengths</h3>
-            <ul>
-                <li>Cross‑Department Communication</li>
-                <li>Stakeholder Management</li>
-                <li>Mentoring & Knowledge Sharing</li>
-                <li>Audit Presentation</li>
-                <li>Documentation & Reporting</li>
-                <li>Time Management</li>
-                <li>Problem Solving</li>
-                <li>Root‑Cause Analysis</li>
-                <li>Multi‑Team Coordination</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section id="certs" class="section" aria-labelledby="projects-title">
+<section id="certs" class="section" aria-labelledby="projects-title\">
 <h2>Certifications</h2>
 	<div class="tools-grid">
         <div class="tool-item">Microsoft Security Fundamentals (SC-900)</div>
@@ -1280,8 +1153,8 @@
 </section>
 </main>
 <footer>
-<div>© <span id="year"></span> Sam Gresty | sgcs.uk</div>
-<div>Hosted on Github Pages</div>
+<div>© <span id="year"></span> SGCS — sgcs.uk</div>
+<div>Made with HTML - Hosted on Github Pages</div>
 <div>
 <a class="social" href=https://github.com/Github-SGCS target="_blank">GitHub</a>
 <a class="social" href=www.linkedin.com/in/samuel-gresty target="_blank">LinkedIn</a>
