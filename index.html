@@ -701,9 +701,9 @@
 <section class="hero" aria-labelledby="hero-title">
 <div class="hero-card">
 <div class="tag"> Cybersecurity • Threat • Operations </div>
-<h1>I'm <span style="color:var(--accent)">Sam</span>, a Cybersecurity Analyst focused on threat detection, response and cloud security.</h1>
-<p class="lead">I work across Microsoft Security and Arctic Wolf tooling to reduce potential compromise, incident response and vulnerability management. I enjoy turning noisy alerts and raw data into clear. actionable decisions.</p>
-<p class="lead"> This portfolio showcases selected projects, practical write-ups and case studies that reflect my approach to cybersecurity challenges in real environments.</p>
+<h1>I'm <span style="color:var(--accent)">Sam</span>, a Cybersecurity Analyst focused on threat detection, response, and cloud security.</h1>
+<p class="lead">I work across Microsoft Security and Arctic Wolf tooling to reduce potential compromise, enhance incident response, and manage vulnerabilities. I enjoy turning noisy alerts and raw data into clear, actionable decisions.</p>
+<p class="lead"> This portfolio showcases selected projects, practical write-ups, and case studies that reflect my approach to cybersecurity challenges in real environments.</p>
 <div class="cta">
 <a class="btn primary" href="#projects">View Projects</a>
 <a class="btn" href=mailto:sam@sgcs.uk?subject=Website%20enquiry>Contact me</a>
@@ -729,7 +729,7 @@
 <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:18px 0">
 <div>
 <strong style="display:block">Note:</strong>
-<p style="margin:6px 0;color:var(--muted)"> This site is actively being refined as i expand my case studies and increaing my HTML knowledge.</p>
+<p style="margin:6px 0;color:var(--muted)"> This site is actively being refined as I expand my case studies and increase my HTML knowledge.</p>
 <div style="display:flex;gap:8px;margin-top:10px">
 
   <!-- PROJECT BUTTON - Change Project Number when making a new Project -->
@@ -1204,16 +1204,16 @@
         body: `
           <p><strong>Summary</strong></p>
           <p>
-            I built a repeatable reporting workflow using KQL and Excel to surface vulnerabilities from Microsoft Defender,
-            calculate their age, and group them by severity and affected assets. The goal was to give leadership a clear,
-            high-level view of risk without them needing to touch the raw tools.
-          </p>
-
+            I built a repeatable reporting workflow using KQL and Excel to surface vulnerabilities from Microsoft Defender, 
+			calculate their age, and group them by severity and affected assets. 
+			The goal was to provide leadership with a clear, high-level view of risk without requiring 
+			them to access the raw tools.
+			</p>
           <h4>Requirements</h4>
           <ol>
             <li>Provide a 30-day view of vulnerabilities affecting the business.</li>
             <li>Use Microsoft Defender and KQL as the primary data source.</li>
-            <li>Produce an easy-to-filter report suitable for IT and senior stakeholders.</li>
+            <li>1. Produce a report that is easy to filter and suitable for IT and senior stakeholders.</li>
           </ol>
 
           <h4>Approach</h4>
@@ -1221,13 +1221,14 @@
             <li>Queried Defender using KQL to pull vulnerability data, including CVEs, device IDs, and timestamps.</li>
             <li>Exported results to CSV and imported into Excel for further transformation.</li>
             <li>Calculated vulnerability age and grouped by severity and device type.</li>
-            <li>Built pivot tables and charts to highlight top affected systems and recurring weaknesses.</li>
+            <li>Built pivot tables and charts to highlight the top affected systems and recurring weaknesses.</li>
           </ul>
 
           <h4>Outcome</h4>
           <p>
-            The report gave IT and leadership a clear view of where to focus patching efforts and which systems carried the most risk.
-            It also formed the basis for recurring monthly vulnerability reviews.
+            The report gave IT and leadership a clear view of where to focus 
+			patching efforts and which systems carried the most risk. 
+			It also formed the basis for recurring monthly vulnerability reviews.
           </p>
         `
       },
@@ -1271,28 +1272,28 @@
         body: `
           <p><strong>Summary</strong></p>
           <p>
-            I produced a malware handling playbook that outlines what to do when a malware alert is raised,
-            from initial triage to eradication and lessons learned.
+            I produced a malware handling playbook that outlines a set of instructions when a malware alert is raised, 
+			from initial triage to eradication and lessons learned.
           </p>
 
           <h4>Why</h4>
           <p>
-            Previously, responses to suspected malware were inconsistent and heavily dependent on who picked up the alert.
-            The playbook provides clarity and reduces the risk of missed steps.
+            Previously, responses to suspected malware were inconsistent and heavily dependent on who picked up the alert. 
+			The playbook provides clarity and reduces the risk of missed steps.
           </p>
 
           <h4>Approach</h4>
           <ul>
-            <li>Defined triggers for when the playbook should be used (e.g. Defender alerts, SOC notifications).</li>
-            <li>Documented containment steps such as isolating devices and revoking access.</li>
+            <li>Defined triggers for when the playbook should be used (e.g., Defender alerts, SOC notifications).</li>
+            <li>Documented containment steps, such as isolating devices and revoking access.</li>
             <li>Outlined investigation steps, including log review and user interviews.</li>
             <li>Included guidance on eradication, validation, and post-incident review.</li>
           </ul>
 
           <h4>Outcome</h4>
           <p>
-            The playbook reduced response time and made it easier for newer team members to handle malware-related alerts
-            with confidence and consistency.
+            The playbook reduced response time and made it 
+			easier for newer team members to handle malware-related alerts with confidence and consistency.
           </p>
         `
       },
@@ -1436,7 +1437,7 @@
 
           <h4>Outcome</h4>
           <p>
-            The policy provides a clear baseline for security behaviour and supports enforcement of technical controls.
+            The policy provides a clear baseline for security behaviour and supports thee enforcement of technical controls.
           </p>
         `
       },
@@ -1476,7 +1477,7 @@
 
           <h4>Approach</h4>
           <ul>
-            <li>Defined fields for likelihood, impact, inherent and residual risk.</li>
+            <li>Defined fields for likelihood, impact, inherent, and residual risk.</li>
             <li>Included owners, mitigation actions, and review cadence.</li>
             <li>Ensured the template could be used across different departments.</li>
           </ul>
